@@ -47,6 +47,13 @@ if ($phoenixFile) {
             $phoenixData[$searchType]['departDate'] = $line->departDate;
             $phoenixData[$searchType]['returnDate'] = $line->returnDate;
 
+            $phoenixData[$searchType]['adultCount'] = $line->adultCount;
+            $phoenixData[$searchType]['childCount'] = $line->childCount;
+            $phoenixData[$searchType]['infantCount'] = $line->infantCount;
+
+            $phoenixData[$searchType]['cabinClass'] = $line->cabinClass;
+            $phoenixData[$searchType]['bookingType'] = $line->bookingType;
+
             // set gal count and average it
             $phoenixData[$searchType]['averageGalTrips'] = isset($phoenixData[$searchType]['averageGalTrips']) ? ($phoenixData[$searchType]['averageGalTrips'] + $line->galTrips) / 2 : $line->galTrips;
 
